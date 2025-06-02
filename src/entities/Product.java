@@ -64,5 +64,14 @@ public class Product {
 				+ " unidades, Total: $"
 				+ String.format("%.2f", TotalValueInStock());
 	}
+	
+	public static void ClearScreen() {
+		for (int i = 0; i < 3; i++) {
+			System.out.println();
+		}
+	}
+	
 }
+
+
 
