@@ -1,20 +1,26 @@
 # StockControl-java
 
-Projeto simples em Java para controle de estoque.  
-Criado como parte dos meus estudos em Programação Orientada a Objetos (POO), usando conceitos como classes, encapsulamento e métodos.
+Projeto simples de controle de estoque em Java, desenvolvido durante os estudos de Programação Orientada a Objetos (POO).
 
-> ℹ️ Este projeto foi baseado em um exercício de curso e será aprimorado com o tempo à medida que avanço nos estudos.
 
-# V1 — Versão inicial do projeto
 
-- Criado com base no exercício do curso
-- Contém as classes Product e Program com:
-  - Cadastro de produto
-  - Atualização de nome e preço via setName e setPrice
-  - Adição e remoção de itens do estoque
-  - Exibição dos dados atualizados no terminal
+## Versão 2
 
----
+A versão atual implementa as funcionalidades básicas de um sistema CRUD (Criar, Ler, Atualizar, Deletar) via console:
 
-Projeto criado como parte de estudos pessoais com foco em evolução prática em Java. 
+- Adicionar produtos
+- Listar produtos
+- Atualizar quantidades em estoque
+- Remover produtos
+
+O código foi aprimorado para utilizar uma lista de produtos (`List<Product>`) e um menu interativo para facilitar a navegação.
+
+Pretendo continuar evoluindo este projeto, incluindo melhorias na interface e, futuramente, integração com um banco de dados.
+
+
+
+## Versão 1
+
+Versão inicial com funcionalidades básicas, focada na prática de conceitos como classes, construtores, getters e setters, e operações simples de estoque com um único produto.
+
 
