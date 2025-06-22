@@ -1,27 +1,36 @@
 package entities;
 
+import java.time.LocalDate;
+import entities.enums.ProductCategory;
+
 public class Product {
 
+	private static Integer nextId = 1;
+	
+	private int id;
 	private String name;
 	private double price;
 	private int quantity;
+	private ProductCategory category;
+	private LocalDate registerDate;
 	
 	
 	public Product() {		
 	}
 	
-	public Product(String name, double price, int quantity) {
+	public Product(String name, double price, int quantity, ProductCategory category) {
+		this.id = nextId++;
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
-		} 
+		this.category = category;
+		this.registerDate = LocalDate.now();
+		}  
 	
-	public Product(String name, double price) {
-		this.name = name;
-		this.price = price;
-		} 
-	
-	
+	public int getId() {
+		return id;
+	}
+	   
 	public String getName() {
 		return name;
 	}
@@ -42,7 +51,18 @@ public class Product {
 		return quantity;
 	}
 	
-	
+    public ProductCategory getCategory() {
+        return category;
+    }
+    
+    public void setCategory(ProductCategory category) {
+        this.category = category;
+    }
+    
+    public LocalDate getRegisterDate() {
+        return registerDate;
+    }
+    
 	public double TotalValueInStock() {
 		return price * quantity;
 	}
@@ -52,23 +72,21 @@ public class Product {
 	}
 	
 	public void RemoveProducts(int quantity) {
-		this.quantity -= quantity;
-	}
-	
-	public String toString() {
-		return name 
-				+ ", $ "
-				+ String.format("%.2f", price)
-				+ ", "
-				+ quantity 
-				+ " unidades, Total: $"
-				+ String.format("%.2f", TotalValueInStock());
-	}
-	
-	public static void ClearScreen() {
-		for (int i = 0; i < 3; i++) {
-			System.out.println();
+		if (quantity <= this.quantity) {
+			this.quantity -= quantity;
+		} else {
+			System.out.println("Erro: Quantidade maior que o estoque disponível.");
 		}
+	}
+	
+	@Override
+	public String toString() {
+		return "ID: " + id
+		        + " | " + name + " (" + category + ")"
+		        + " | R$ " + String.format("%.2f", price)
+		        + " | " + quantity + " unidades"
+		        + " | Total: R$ " + String.format("%.2f", TotalValueInStock())
+		        + " | Cadastrado em: " + registerDate;
 	}
 	
 }
