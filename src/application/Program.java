@@ -108,7 +108,6 @@ public class Program {
 		clearConsole();
 	}
 	
-	
 	private static void increaseStock(Scanner sc, List<Product> list) {
 		
 		System.out.println();
@@ -138,7 +137,6 @@ public class Program {
 
 	}
 	
-	
 	private static void decreaseStock(Scanner sc, List<Product> list) {
 		System.out.println();
 		System.out.print("Digite o nome do produto: ");
@@ -167,7 +165,6 @@ public class Program {
 		
 	}
 	
-	
 	private static void deleteProduct(Scanner sc, List<Product> list) {
 		System.out.println();
 		System.out.print("Digite o nome do produto que deseja excluir: ");
@@ -195,7 +192,6 @@ public class Program {
 		
 	}
 	
-	
 	private static void showProductList(List<Product> list) {
 		System.out.println();
 		System.out.println("Lista de produtos cadastrados: ");
@@ -206,7 +202,6 @@ public class Program {
 		
 		clearConsole();
 	}
-	
 	
 	public static void clearConsole() {
 		System.out.println("\n\n\n");

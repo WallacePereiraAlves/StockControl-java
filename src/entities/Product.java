@@ -81,12 +81,8 @@ public class Product {
 	
 	@Override
 	public String toString() {
-		return "ID: " + id
-		        + " | " + name + " (" + category + ")"
-		        + " | R$ " + String.format("%.2f", price)
-		        + " | " + quantity + " unidades"
-		        + " | Total: R$ " + String.format("%.2f", TotalValueInStock())
-		        + " | Cadastrado em: " + registerDate;
+		return String.format("ID: %d | %s (%s), $%.2f, %d unidades, Total: $%.2f, Cadastrado em: %s",
+                id, name, category, price, quantity, TotalValueInStock(), registerDate);
 	}
 	
 }
