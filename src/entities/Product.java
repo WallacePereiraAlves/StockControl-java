@@ -67,11 +67,11 @@ public class Product {
 		return price * quantity;
 	}
 	
-	public void AddProducts(int quantity) {
+	public void addProducts(int quantity) {
 		this.quantity += quantity;
 	}
 	
-	public void RemoveProducts(int quantity) {
+	public void removeProducts(int quantity) {
 		if (quantity <= this.quantity) {
 			this.quantity -= quantity;
 		} else {
